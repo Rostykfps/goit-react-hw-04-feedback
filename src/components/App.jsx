@@ -6,9 +6,9 @@ import Notification from './Notification/Notification';
 import { Container } from './App.styled';
 
 const App = () => {
-  const [good, setgood] = useState(0);
-  const [neutral, setneutral] = useState(0);
-  const [bad, setbad] = useState(0);
+  const [good, setGood] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [bad, setBad] = useState(0);
 
   const btnOptions = ['Good', 'Neutral', 'Bad'];
 
@@ -16,13 +16,13 @@ const App = () => {
     const currentFeedback = event.target.textContent.toLowerCase();
     switch (currentFeedback) {
       case 'good':
-        setgood(prevState => prevState + 1);
+        setGood(prevState => prevState + 1);
         break;
       case 'neutral':
-        setneutral(prevState => prevState + 1);
+        setNeutral(prevState => prevState + 1);
         break;
       case 'bad':
-        setbad(prevState => prevState + 1);
+        setBad(prevState => prevState + 1);
         break;
 
       default:
